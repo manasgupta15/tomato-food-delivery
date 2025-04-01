@@ -136,7 +136,7 @@
 @media (max-width: 750px) {
   .header {
     height: 65vw;
-    margin: -8vw auto -7vw; /* Reduced top margin and negative bottom margin */
+    margin: -13vw auto -7vw; /* Reduced top margin and negative bottom margin */
     background-position: center;
   }
 
