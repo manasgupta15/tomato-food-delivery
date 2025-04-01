@@ -1,0 +1,136 @@
+/* .order-item {
+  display: grid;
+  grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr;
+  align-items: start;
+  gap: 30px;
+  border: 1px solid tomato;
+  padding: 20px;
+  margin: 30px 0px;
+  font-size: 14px;
+  color: #505050;
+}
+
+.order-item-food,
+.order-item-name {
+  font-weight: 600;
+}
+
+.order-item-name {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.order-item-address {
+  margin-bottom: 10px;
+}
+
+.order-item select {
+  background-color: #ffe8e4;
+  border: 1px solid tomato;
+  width: max(10vw, 120px);
+  padding: 10px;
+  outline: none;
+}
+
+@media (max-width: 1000px) {
+  .order-item {
+    font-size: 12px;
+    grid-template-columns: 0.5fr 2fr 1fr;
+    padding: 15px 8px;
+  }
+  .order-item select {
+    padding: 5px;
+    font-size: 12px;
+  }
+
+  .order-item img {
+    width: 40px;
+  }
+} */
+
+/* Base styles for all screens */
+
+.order.add h3 {
+  margin: 3 0; /* Uniform margin */
+  font-size: 24px;
+  color: #333;
+}
+
+.order-item {
+  display: grid;
+  grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr;
+  align-items: start;
+  gap: 30px;
+  border: 1px solid tomato;
+  padding: 20px;
+  margin: 20px 0; /* Reduced from 30px for better spacing */
+  font-size: 14px;
+  color: #505050;
+}
+
+/* Tablet styles (601px - 1000px) */
+@media (max-width: 1000px) {
+  .order-item {
+    font-size: 12px;
+    grid-template-columns: 0.5fr 2fr 1fr;
+    padding: 15px;
+    margin: 15px 0;
+    gap: 20px;
+  }
+
+  .order-item select {
+    padding: 5px;
+    font-size: 12px;
+    width: 100px;
+  }
+
+  .order-item img {
+    width: 40px;
+  }
+}
+
+/* Mobile styles (up to 600px) */
+@media (max-width: 600px) {
+  .order.add {
+    padding: 15px;
+    margin: 5px 0 80px; /* Top:10px, Bottom:80px (for footer space) */
+  }
+
+  .order.add h3 {
+    margin: 5px 0;
+    font-size: 20px;
+  }
+
+  .order-item {
+    margin: 10px 0;
+    padding: 12px;
+    gap: 12px;
+  }
+
+  .order-item select {
+    width: 100%; /* Full width on mobile */
+  }
+}
+
+/* Common item styles (for all screens) */
+.order-item-food,
+.order-item-name {
+  font-weight: 600;
+}
+
+.order-item-name {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.order-item-address {
+  margin-bottom: 10px;
+}
+
+.order-item select {
+  background-color: #ffe8e4;
+  border: 1px solid tomato;
+  width: max(10vw, 120px);
+  padding: 10px;
+  outline: none;
+}

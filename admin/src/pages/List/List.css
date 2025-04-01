@@ -1,0 +1,159 @@
+/* .list-table-format {
+  display: grid;
+  grid-template-columns: 0.5fr 2fr 1fr 1fr 0.5fr;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 15px;
+  border: 1px solid #cacaca;
+  font-size: 13px;
+}
+
+.list-table-format .title {
+  background-color: #f9f9f9;
+}
+
+.list-table-format img {
+  width: 50px;
+} */
+
+/* Food Table Container */
+.food-table-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 40px auto; /* Margin from top and bottom */
+  padding: 20px;
+  overflow-x: auto;
+}
+
+/* Table Header */
+.food-table {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: 2px solid #ddd; /* Outer border */
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+}
+
+/* Header & Row Styles */
+.food-table-header,
+.food-table-row {
+  display: grid;
+  grid-template-columns: 0.8fr 2fr 1fr 1fr 0.5fr;
+  align-items: center;
+  gap: 0px; /* No gap between columns */
+  padding: 15px 20px;
+  font-size: 15px;
+  border-bottom: 2px solid #ddd; /* Row separation */
+  position: relative;
+}
+
+/* Adding vertical column separator */
+.food-table-header > *,
+.food-table-row > * {
+  border-right: 5px solid #ddd; /* Column separator */
+  padding: 10px;
+  text-align: center;
+}
+
+.food-table-header > *:last-child,
+.food-table-row > *:last-child {
+  border-right: none; /* Remove separator for the last column */
+}
+
+.food-table-header {
+  background-color: #f8f8f8;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Row Hover Effect */
+.food-table-row {
+  transition: background 0.3s ease;
+}
+
+.food-table-row:hover {
+  background-color: #f5f5f5;
+}
+
+/* Table Images */
+.food-table-row img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 5px;
+  border: 2px solid #ddd;
+}
+
+/* Delete Button */
+.delete-btn {
+  cursor: pointer;
+  color: red;
+  background: none;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.delete-btn:hover {
+  color: darkred;
+}
+
+/* No Data Message */
+.no-data {
+  text-align: center;
+  padding: 20px;
+  font-size: 16px;
+  color: gray;
+}
+
+/* 🔹 Responsive Design (Tablets & Mobiles) */
+@media screen and (max-width: 900px) {
+  .food-table-header,
+  .food-table-row {
+    grid-template-columns: 1fr 2fr 1fr 1fr 0.5fr;
+    font-size: 14px;
+    padding: 12px 15px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .food-table-container {
+    margin: 20px auto;
+    padding: 15px;
+    margin-bottom: 80px;
+  }
+
+  .food-table-header,
+  .food-table-row {
+    font-size: 13px;
+    padding: 10px 12px;
+  }
+
+  .food-table-row img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .food-table-container {
+    margin: 15px auto;
+    padding: 10px;
+    margin-bottom: 50px;
+  }
+
+  .food-table-header,
+  .food-table-row {
+    font-size: 12px;
+    padding: 8px 10px;
+  }
+
+  .food-table-row img {
+    width: 45px;
+    height: 45px;
+  }
+}

@@ -1,0 +1,172 @@
+.food-display {
+  margin-top: 30px;
+  padding: 0 5%;
+}
+
+/* .food-display h2 {
+  font-size: clamp(22px, 2.5vw, 28px);
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: #333;
+  text-align: center;
+} */
+
+.food-display-text {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.food-display h2 {
+  font-size: clamp(26px, 3vw, 32px);
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #222;
+  background: linear-gradient(90deg, #ff6347, #ff4500);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.food-display-subtitle {
+  font-size: clamp(16px, 1.8vw, 18px);
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.food-display-list {
+  display: grid;
+  gap: 25px;
+}
+
+/* Desktop (4 columns) */
+.food-display-list {
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+}
+
+/* Add this to your existing CSS (keep all other styles) */
+.show-more-btn {
+  display: block;
+  margin: 40px auto 0;
+  padding: 12px 30px;
+  background: linear-gradient(135deg, #ff6347 0%, #ff4500 100%);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(255, 99, 71, 0.3);
+  min-width: 160px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.show-more-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #ff4500 0%, #ff6347 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.show-more-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(255, 99, 71, 0.4);
+}
+
+.show-more-btn:hover::after {
+  opacity: 1;
+}
+
+.show-more-btn span {
+  position: relative;
+  z-index: 2;
+}
+
+.show-more-btn i {
+  margin-left: 8px;
+  transition: transform 0.3s ease;
+}
+
+.show-more-btn:hover i {
+  transform: translateY(2px);
+}
+
+/* For the arrow icon - add if you want to include icons */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css");
+/* Tablet (3 columns) */
+@media (max-width: 1023px) {
+  .food-display-list {
+    grid-template-columns: repeat(3, minmax(180px, 1fr));
+  }
+}
+
+.show-more-btn {
+  display: block;
+  margin: 30px auto 0;
+  padding: 10px 25px;
+  background-color: #ff6347;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.show-more-btn:hover {
+  background-color: #e5533d;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile (1 column - Cute Small Cards) */
+@media (max-width: 767px) {
+  .food-display-list {
+    grid-template-columns: 1fr; /* Single column */
+    gap: 20px;
+  }
+
+  .food-item {
+    max-width: 500px; /* Controlled card width */
+    margin: 0 auto; /* Center cards */
+    padding: 12px;
+    border-radius: 16px;
+    background: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+  }
+
+  .food-item img {
+    border-radius: 12px;
+  }
+
+  .food-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  }
+
+  /* .food-display h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  } */
+
+  .food-display-text {
+    margin-bottom: 20px;
+  }
+
+  .food-display-subtitle {
+    padding: 0 15px;
+  }
+}

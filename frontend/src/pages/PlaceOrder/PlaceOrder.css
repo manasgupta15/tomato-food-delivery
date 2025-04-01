@@ -1,0 +1,250 @@
+/* .place-order {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 50px;
+  margin-top: 100px;
+}
+
+.place-order-left {
+  width: 100%;
+  max-width: max(30%, 500px);
+}
+
+.place-order-left .title {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 50px;
+}
+
+.place-order-left input {
+  margin-bottom: 15px;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #c5c5c5;
+  border-radius: 4px;
+  outline-color: tomato;
+}
+
+.place-order-left .multi-fields {
+  display: flex;
+  gap: 10px;
+}
+
+.place-order-right {
+  width: 100%;
+  max-width: max(40%, 500px);
+}
+
+.place-order .cart-total button {
+  margin-top: 30px;
+} */
+
+.place-order-container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+.place-order {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.place-order-left {
+  width: 100%;
+  max-width: 600px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.place-order-left .title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #2a2a2a;
+  position: relative;
+}
+
+.place-order-left .title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: tomato;
+  border-radius: 2px;
+}
+
+.place-order-left input {
+  margin-bottom: 20px;
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: all 0.3s;
+  background-color: #f9f9f9;
+}
+
+.place-order-left input:focus {
+  outline: none;
+  border-color: tomato;
+  box-shadow: 0 0 0 2px rgba(255, 99, 71, 0.2);
+  background-color: #fff;
+}
+
+.place-order-left input::placeholder {
+  color: #999;
+}
+
+.place-order-left .multi-fields {
+  display: flex;
+  gap: 15px;
+}
+
+.place-order-right {
+  width: 100%;
+  max-width: 500px;
+  position: sticky;
+  top: 30px;
+}
+
+.cart-total {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.cart-total h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #2a2a2a;
+  position: relative;
+}
+
+.cart-total h2::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: tomato;
+  border-radius: 2px;
+}
+
+.cart-total-items {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.cart-total-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart-total-details p {
+  font-size: 16px;
+  color: #555;
+}
+
+.cart-total-details.grand-total {
+  margin-top: 10px;
+}
+
+.cart-total-details.grand-total b {
+  font-size: 20px;
+  color: #2a2a2a;
+}
+
+.divider {
+  height: 1px;
+  background: #e0e0e0;
+  width: 100%;
+}
+
+.payment-btn {
+  width: 100%;
+  margin-top: 30px;
+  padding: 16px;
+  border: none;
+  border-radius: 8px;
+  background: tomato;
+  color: white;
+  font-size: 18px;
+  /* font-weight: 600; */
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.payment-btn:hover {
+  background: #ff6347;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 99, 71, 0.3);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .place-order {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .place-order-left,
+  .place-order-right {
+    max-width: 100%;
+  }
+
+  .place-order-right {
+    position: static;
+  }
+
+  .place-order-left .title,
+  .cart-total h2 {
+    font-size: 24px;
+  }
+
+  .place-order-left input {
+    padding: 12px;
+    font-size: 15px;
+  }
+
+  .payment-btn {
+    padding: 14px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .place-order-left .multi-fields {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .place-order-container {
+    margin: 20px auto;
+    padding: 0 15px;
+  }
+
+  .place-order-left,
+  .cart-total {
+    padding: 20px;
+  }
+
+  .place-order-left .title,
+  .cart-total h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+}

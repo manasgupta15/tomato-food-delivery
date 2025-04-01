@@ -1,0 +1,212 @@
+/* .add {
+  width: 70%;
+  margin-left: max(5vw, 25px);
+  margin-top: 50px;
+  color: #6d6d6d;
+  font-size: 16px;
+}
+
+.add form {
+  gap: 20px;
+}
+
+.add-img-upload img {
+  width: 120px;
+}
+
+.add-product-name,
+.add-product-description {
+  width: max(40%, 280pxw);
+}
+
+.add-product-name input,
+.add-product-description textarea {
+  padding: 10px;
+}
+
+.add-category-price {
+  display: flex;
+  gap: 30px;
+}
+
+.add-category-price select,
+.add-category-price input {
+  max-width: 120px;
+  padding: 10px;
+}
+
+.add-btn {
+  max-width: 120px;
+  border: none;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+} */
+
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #ffffff;
+  color: #333;
+}
+
+/* Container for Add Form */
+.add {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 40px 20px; /* Added padding for spacing */
+}
+
+/* Form Styling */
+.add form {
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin: 0px 0; /* Margin added for better spacing */
+}
+
+/* Image Upload Section */
+.add-img-upload {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+}
+
+.add-img-upload label {
+  width: 150px;
+  height: 150px;
+  border: 2px dashed #ff6347;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: #f9f9f9;
+  position: relative;
+}
+
+.add-img-upload label:hover {
+  background: #ffe6e2;
+  border-color: #ff4500;
+}
+
+.add-img-upload img {
+  max-width: 80%;
+  max-height: 80%;
+  object-fit: contain;
+  transition: transform 0.3s ease-in-out, opacity 0.3s;
+  opacity: 0.9;
+}
+
+.add-img-upload label img:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.add-img-upload input {
+  display: none;
+}
+
+/* Product Name & Description */
+.add-product-name,
+.add-product-description,
+.add-category-price {
+  width: 100%;
+}
+
+.add-product-name input,
+.add-product-description textarea,
+.add-category-price select,
+.add-category-price input {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  background: #f9f9f9;
+  color: #333;
+}
+
+.add-product-name input:focus,
+.add-product-description textarea:focus,
+.add-category-price select:focus,
+.add-category-price input:focus {
+  border-color: #ff6347;
+  box-shadow: 0 0 0 3px rgba(255, 99, 71, 0.2);
+  background: white;
+}
+
+/* Category and Price Section */
+.add-category-price {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.add-category,
+.add-price {
+  flex: 1;
+  min-width: 180px;
+}
+
+/* Button Styling */
+.add-btn {
+  width: 100%;
+  padding: 16px;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  background: linear-gradient(135deg, #ff6347, #ff4500);
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 99, 71, 0.3);
+}
+
+.add-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 99, 71, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .add {
+    padding: 60px 20px; /* Increased padding */
+  }
+
+  .add-category-price {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .add form {
+    max-width: 100%;
+    margin-bottom: 60px;
+  }
+
+  .add-btn {
+    padding: 14px;
+  }
+
+  .add-img-upload label {
+    width: 120px;
+    height: 120px;
+  }
+}
