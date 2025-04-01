@@ -28,9 +28,6 @@ app.get("/", (req, res) => {
   res.send("  API Working 🚀");
 });
 
-// For Vercel deployment, export the app
-export default app;
-
 app.listen(port, () => {
   console.log(`Server Started on http://localhost:${port}`);
 });
